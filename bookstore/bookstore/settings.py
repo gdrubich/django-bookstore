@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
     'store',
     'registration'
 ]
@@ -64,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -101,6 +104,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Authentication from social media
+
+AUTHENTICATION_BACKENDS = {
+    'social.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -136,3 +145,9 @@ EMAIL_HOST_PASSWORD = "38895723g"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "book@mysterybooks.com"
+
+# Social auth - facebook
+
+SOCIAL_AUTH_FACEBOOK_KEY = '322316444928459'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'f816e3363908fbee152293f9b98b3987'
+
