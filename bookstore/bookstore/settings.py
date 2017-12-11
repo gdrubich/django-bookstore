@@ -108,6 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = {
     'social.backends.facebook.FacebookOAuth2',
+    'social.backends.facebook.FacebookAppOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 }
 
@@ -150,4 +151,5 @@ DEFAULT_FROM_EMAIL = "book@mysterybooks.com"
 
 SOCIAL_AUTH_FACEBOOK_KEY = '322316444928459'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'f816e3363908fbee152293f9b98b3987'
+SOCIAL_AUTH_REDIRECT_URL = '/'
 
