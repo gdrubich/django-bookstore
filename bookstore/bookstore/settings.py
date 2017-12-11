@@ -38,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
-    'store',
     'registration',
     'bootstrap3',
     'bootstrap_themes',
+    'compressor',
+    'store',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -132,6 +133,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+COMPRESS_ENABLED = True
+STATICFILES_FINDERS = {
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+
+}
 
 # Registration
 
@@ -151,7 +160,7 @@ DEFAULT_FROM_EMAIL = "book@mysterybooks.com"
 
 # Social auth - facebook
 
-SOCIAL_AUTH_FACEBOOK_KEY = '322316444928459'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'f816e3363908fbee152293f9b98b3987'
+SOCIAL_AUTH_FACEBOOK_KEY = '466922353704116'
+SOCIAL_AUTH_FACEBOOK_SECRET = '6ce1547cc29ace6f3d4fb780770ec4cd'
 SOCIAL_AUTH_REDIRECT_URL = '/'
 
