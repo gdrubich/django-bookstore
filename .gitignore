@@ -105,3 +105,6 @@ venv.bak/
 
 # SQL Lite database
 .sqlite3
+
+# static cached folder
+static/
