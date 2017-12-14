@@ -33,12 +33,12 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'registration',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
-    'registration',
     'bootstrap3',
     'bootstrap_themes',
     'compressor',
@@ -155,9 +155,9 @@ LOGIN_REDIRECT_URL = '/store'
 # Email settings
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "gdrubich@gmail.com"
-EMAIL_HOST_PASSWORD = "38895723g"
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = "postmaster@sandboxefaa98ec087544efb8acc6a00bb825f8.mailgun.org"
+EMAIL_HOST_PASSWORD = "42ae1fd93d5d0dc3a180ddcae8c4cb2d"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "book@mysterybooks.com"
